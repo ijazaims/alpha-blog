@@ -2,3 +2,13 @@
 
 <p><strong>Title: </strong><%= @article.title.capitalize %></p>
 <p><strong>Description: </strong><%= @article.description.capitalize %></p>
+
+<p>
+    <%= link_to 'Edit', edit_article_path(@article) %>
+    <%= button_to 'Delete', article_path(@article), method: :delete, onclick: "return confirm('Are you sure?')" %>
+    <%= link_to 'Create new article', new_article_path %>
+    <%= link_to 'Return to article listing', articles_path %>
+    <br/><br/>
+    <%= link_to 'Home page', root_path %>
+    <%= link_to 'About page', about_path %>
+</p>
