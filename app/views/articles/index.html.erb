@@ -1,0 +1,20 @@
+<h1>Index Article Listing Page</h1> 
+
+<table bgcolor="#90EE90" border=1>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @articles.each do |myartical| %>
+        <tr>
+            <td><%= myartical.title %></td>
+            <td><%= myartical.description %></td>
+            <td>MyPlaceholder</td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

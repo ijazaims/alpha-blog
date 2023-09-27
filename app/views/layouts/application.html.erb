@@ -9,9 +9,27 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= # javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
      %>
+     <style>
+      table,
+      th,
+      td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      
+      th,
+      td {
+          padding: 20px;
+      }
+      
+      th {
+          text-align: left;
+      }
+    </style>
   </head>
 
   <body>
+    <%= flash[:notice]%> 
     <%= yield %>
   </body>
 </html>
